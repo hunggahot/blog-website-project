@@ -3,8 +3,12 @@ import "./HomePage.scss";
 import { banner_image, search_icon } from "../../utils/images";
 import Title from "../../components/Title/Title";
 import BlogList from "../../components/BlogList/BlogList";
+import { useBlogsContext } from "../../context/blogsContext";
 
 const HomePage = () => {
+  const { blogs, setSearchTerm, searchTerm, fetchBlogsFromSearch } =
+    useBlogsContext();
+
   const handleSearchForm = (e) => {};
 
   const handleSearchResult = (e) => {};

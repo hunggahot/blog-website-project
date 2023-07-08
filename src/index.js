@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { SidebarProvider } from "./context/sidebarContext";
+import { BlogsProvider } from "./context/blogsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <SidebarProvider>
-    <App />
+    <BlogsProvider>
+      <App />
+    </BlogsProvider>
   </SidebarProvider>
 );
 
