@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 import { useSidebarContext } from "../../context/sidebarContext";
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSideBar } = useSidebarContext();
-
+  const { isSidebarOpen, closeSidebar } = useSidebarContext();
   return (
     <div className={`sidebar ${isSidebarOpen ? "sidebar-open" : ""}`}>
       <button
         type="button"
         className="sidebar-close-btn"
-        onClick={() => closeSideBar()}
+        onClick={() => closeSidebar()}
       >
         <FaTimes size={24} className="text-white" />
       </button>
@@ -21,7 +20,7 @@ const Sidebar = () => {
         <span className="navbar-brand-icon">
           <GiPapers />
         </span>
-        <span className="navbar-brand-txt font-rubik fw-5">Blog</span>
+        <span className="navbar-brand-txt font-rubik fw-5">Blog.</span>
       </Link>
       <ul className="sidebar-nav font-rubik my-5">
         <li className="nav-item">
@@ -30,29 +29,28 @@ const Sidebar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/" className="nav-link text-white fw-4 fs-18">
+          <Link to="/blog" className="nav-link text-white fw-4 fs-18">
             Blog
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/" className="nav-link text-white fw-4 fs-18">
+          <Link to="/about" className="nav-link text-white fw-4 fs-18">
             About
           </Link>
         </li>
       </ul>
-
       <div className="sidebar-blocks my-5">
         <div className="sidebar-block">
           <h3 className="font-rubik text-white">Address</h3>
-          <p className="text-white">123 Nguyen Van Cu, Quan 1, Tp.HCM</p>
+          <p className="text-white">3538 Cambridge Place Laurel, MD 20707</p>
         </div>
         <div className="sidebar-block">
           <h3 className="font-rubik text-white">Phone</h3>
-          <p className="text-white">036 112 2384</p>
+          <p className="text-white">687-009-5768</p>
         </div>
         <div className="sidebar-block">
           <h3 className="font-rubik text-white">Email</h3>
-          <p className="text-white">123@gmail.com</p>
+          <p className="text-white">blog@contact.com</p>
         </div>
       </div>
     </div>
