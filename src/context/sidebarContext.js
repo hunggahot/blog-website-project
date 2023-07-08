@@ -6,7 +6,7 @@ const initialState = {
   isSidebarOpen: false,
 };
 
-const SidebarContext = React.createContext();
+const SidebarContext = createContext();
 
 export const SidebarProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
