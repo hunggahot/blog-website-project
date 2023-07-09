@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomePage.scss";
 import { banner_image, search_icon } from "../../utils/images";
 import Title from "../../components/Title/Title";
@@ -9,9 +9,23 @@ const HomePage = () => {
   const { blogs, setSearchTerm, searchTerm, fetchBlogsFromSearch } =
     useBlogsContext();
 
-  const handleSearchForm = (e) => {};
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSearchResult = (e) => {};
+  const handleSearchForm = (e) => {
+    e.preventDefault();
+    if (e.target.value.replace(/[^\w\s]/gi, "").length !== 0) {
+      setSearchTerm(e.target.value);
+      setErrorMsg("");
+    } else {
+      setErrorMsg("Invalid search term...");
+    }
+  };
+
+  const handleSearchResult = (e) => {
+    e.preventDefault();
+    console.log(searchTerm);
+    fetchBlogsFromSearch(searchTerm);
+  };
 
   return (
     <div className="main-holder bg-light-blue">
@@ -39,7 +53,7 @@ const HomePage = () => {
                   onChange={(e) => handleSearchForm(e)}
                 />
                 <span className="form-text form-rubik fs-14 fw-4">
-                  error message here
+                  {errorMsg}
                 </span>
                 <button
                   type="submit"

@@ -46,9 +46,22 @@ export const BlogsProvider = ({ children }) => {
 
   const fetchSingleBlog = async (id) => {};
 
-  const fetchBlogsFromSearch = async (searchTerm) => {};
+  const fetchBlogsFromSearch = async (searchTerm) => {
+    dispatch({ type: GET_BLOG_BY_SEARCHTERM_BEGIN });
+    try {
+      const response = await axios.get(`${SEARCH_URL}${searchTerm}`);
+      dispatch({
+        type: GET_BLOG_BY_SEARCHTERM_SUCCESS,
+        payload: response.data.posts,
+      });
+    } catch (err) {
+      dispatch({ type: GET_BLOG_BY_SEARCHTERM_ERROR });
+    }
+  };
 
-  const setSearchTerm = (searchTerm) => {};
+  const setSearchTerm = (searchTerm) => {
+    dispatch({ type: SET_SEARCH_TERM, payload: searchTerm });
+  };
 
   useEffect(() => {
     fetchBlogs();
