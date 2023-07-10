@@ -20,7 +20,7 @@ const Sidebar = () => {
         <span className="navbar-brand-icon">
           <GiPapers />
         </span>
-        <span className="navbar-brand-txt font-rubik fw-5">Blog.</span>
+        <span className="navbar-brand-txt font-rubik fw-5">Blog</span>
       </Link>
       <ul className="sidebar-nav font-rubik my-5">
         <li className="nav-item">
