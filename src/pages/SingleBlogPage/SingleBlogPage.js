@@ -3,18 +3,22 @@ import "./SingleBlogPage.scss";
 import Title from "../../components/Title/Title";
 import SingleBlog from "../../components/SingleBlog/SingleBlog";
 import { useBlogsContext } from "../../context/blogsContext";
+import { useUserContext } from "../../context/userContext";
 import { useParams } from "react-router-dom";
 import { banner_image } from "../../utils/images";
 
 const SingleBlogPage = () => {
   const { fetchSingleBlog, singleBlog } = useBlogsContext();
+  const { fetchSingleUser, singleUser } = useUserContext();
   const { id } = useParams();
 
   useEffect(() => {
     fetchSingleBlog(id);
+
+    if (singleBlog.userId) fetchSingleUser(singleBlog.userId);
   }, [singleBlog.id, id]);
 
-  console.log(singleBlog);
+  console.log(singleUser);
 
   return (
     <div className="main-holder bg-light-blue">

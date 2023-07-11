@@ -4,13 +4,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { SidebarProvider } from "./context/sidebarContext";
 import { BlogsProvider } from "./context/blogsContext";
+import { UserProvider } from "./context/userContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <SidebarProvider>
-    <BlogsProvider>
-      <App />
-    </BlogsProvider>
+    <UserProvider>
+      <BlogsProvider>
+        <App />
+      </BlogsProvider>
+    </UserProvider>
   </SidebarProvider>
 );
 
