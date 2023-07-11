@@ -23,7 +23,7 @@ const blogsReducer = (state, action) => {
         ...state,
         blogsLoading: false,
         blogs: action.payload,
-        tempsBlogs: action.payload,
+        tempBlogs: action.payload,
       };
     case GET_BLOG_ERROR:
       return {

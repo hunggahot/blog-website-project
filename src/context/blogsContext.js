@@ -27,6 +27,7 @@ const initialState = {
   singleBlog: [],
   searchTerm: "",
   searchBlogsError: false,
+  searchBlogsLoading: false,
 };
 
 const BlogsContext = createContext({});

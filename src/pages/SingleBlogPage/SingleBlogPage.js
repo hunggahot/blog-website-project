@@ -4,28 +4,30 @@ import Title from "../../components/Title/Title";
 import SingleBlog from "../../components/SingleBlog/SingleBlog";
 import { useBlogsContext } from "../../context/blogsContext";
 import { useUserContext } from "../../context/userContext";
+import { useCommentContext } from "../../context/commentContext";
 import { useParams } from "react-router-dom";
 import { banner_image } from "../../utils/images";
 
 const SingleBlogPage = () => {
   const { fetchSingleBlog, singleBlog } = useBlogsContext();
   const { fetchSingleUser, singleUser } = useUserContext();
+  const { fetchCommentsByPost, commentsByPost } = useCommentContext();
+
   const { id } = useParams();
 
   useEffect(() => {
     fetchSingleBlog(id);
 
     if (singleBlog.userId) fetchSingleUser(singleBlog.userId);
-  }, [singleBlog.id, id]);
-
-  console.log(singleUser);
+    if (singleBlog.id) fetchCommentsByPost(singleBlog.id);
+  }, [singleBlog.userId, singleBlog.id, id]);
 
   return (
     <div className="main-holder bg-light-blue">
       <header
         className="header"
         style={{
-          background: `linear-gradiem(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(${banner_image}) center/cover no-repeat`,
+          background: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(${banner_image}) center/cover no-repeat`,
         }}
       >
         <div className="container">
@@ -38,7 +40,11 @@ const SingleBlogPage = () => {
       <section className="section py-7">
         <div className="container">
           <div className="section-content bg-white">
-            <SingleBlog blog={singleBlog} />
+            <SingleBlog
+              blog={singleBlog}
+              user={singleUser}
+              comments={commentsByPost}
+            />
           </div>
         </div>
       </section>

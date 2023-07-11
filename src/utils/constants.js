@@ -25,7 +25,13 @@ export const GET_SINGLE_USER_BEGIN = "GET_SINGLE_USER_BEGIN";
 export const GET_SINGLE_USER_SUCCESS = "GET_SINGLE_USER_SUCCESS";
 export const GET_SINGLE_USER_ERROR = "GET_SINGLE_USER_ERROR";
 
+// COMMENT
+export const GET_COMMENT_BY_POST_BEGIN = "GET_COMMENT_BY_POST_BEGIN";
+export const GET_COMMENT_BY_POST_SUCCESS = "GET_COMMENT_BY_POST_SUCCESS";
+export const GET_COMMENT_BY_POST_ERROR = "GET_COMMENT_BY_POST_ERROR";
+
 // URL
 export const BLOG_URL = "posts";
 export const SEARCH_URL = "posts/search?q=";
 export const USER_URL = "users";
+export const COMMENT_BY_POST_URL = "comments/post";
