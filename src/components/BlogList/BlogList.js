@@ -25,7 +25,7 @@ const BlogList = ({ blogs }) => {
               <div className="blog-item-title fw-5 fs-18 font-rubik">
                 {blog.title}
               </div>
-              <div className="blog-tem-text">
+              <div className="blog-item-text">
                 {blog.body.substring(0, 100)}...
               </div>
               <div className="blog-item-reaction flex align-center">

@@ -10,7 +10,7 @@ const Navbar = () => {
   const { openSidebar } = useSidebarContext();
 
   return (
-    <nav className="navbar bg-purple flex align-center">
+    <nav className="navbar bg-gradient flex align-center">
       <div className="container w-100">
         <div className="navbar-content flex align-center justify-between">
           <div className="brand-and-toggler">

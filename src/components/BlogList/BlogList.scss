@@ -27,7 +27,7 @@
             margin-top: 12px;
 
             &-single {
-                background-color: $clr-ex-blue;
+                background-image: $gradient;
                 color           : $clr-white;
                 margin          : 4px;
                 padding         : 3px 12px;
@@ -56,9 +56,9 @@
         }
 
         &:hover {
-            background-color: $clr-ex-blue;
-            color           : $clr-white;
-            box-shadow      : rgba(130, 0, 221, 0.15) 0px 7px 10px 0px;
+            background-image   : $gradient;
+            color              : $clr-white;
+            // box-shadow      : rgba(130, 0, 221, 0.15) 0px 7px 10px 0px;
 
             .blog-item-btn {
                 .read-more-btn {
@@ -68,8 +68,9 @@
 
             .blog-item-tags {
                 &-single {
-                    background-color: $clr-white !important;
-                    color           : $clr-purple;
+                    background-image   : $gradient-dark-blue !important;
+                    // color           : $clr-black !important;
+                    transition         : $transition;
                 }
             }
         }
