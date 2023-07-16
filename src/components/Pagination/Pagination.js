@@ -10,7 +10,7 @@ const Pagination = ({ noOfBlogs, paginateHandler }) => {
         return (
           <button
             type="button"
-            className="paginate-item font-rubik bg-ex-blue flex align-center justify-center text-white"
+            className="paginate-item font-rubik bg-light-blue-gradient flex align-center justify-center text-white"
             onClick={() => paginateHandler(idx + 1)}
             key={idx}
           >

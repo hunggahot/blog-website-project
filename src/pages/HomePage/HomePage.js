@@ -57,7 +57,7 @@ const HomePage = () => {
                 </span>
                 <button
                   type="submit"
-                  className="form-btn bg-purple flex align-center justify-center"
+                  className="form-btn bg-light-blue-gradient flex align-center justify-center"
                 >
                   <img src={search_icon} alt="" />
                 </button>

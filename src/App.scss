@@ -20,7 +20,7 @@ $font-family-rubik: 'Rubik',
 sans-serif;
 $transition: all 300ms ease-in-out;
 
-$gradient: linear-gradient(45deg,
+$gradient-light-blue: linear-gradient(45deg,
     #6DA1FC,
     #4CD9FE);
 
@@ -236,8 +236,8 @@ select {
         background-color: $clr-ex-blue;
     }
 
-    &-gradient {
-        background-image: $gradient;
+    &-light-blue-gradient {
+        background-image: $gradient-light-blue;
     }
 }
 

@@ -5,7 +5,7 @@
     top             : 0;
     right           : 0;
     width           : 320px;
-    background-color: $clr-mid-blue;
+    background-image: $gradient-light-blue;
     height          : 100%;
     z-index         : 999;
     padding         : 36px;
@@ -32,7 +32,7 @@
 
     .sidebar-nav {
         .nav-item {
-            border-bottom: 1px solid darken($clr-mid-purple, 20%);
+            border-bottom: 1px solid darken($clr-white, 20%);
             padding      : 10px 0;
         }
     }

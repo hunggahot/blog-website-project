@@ -10,13 +10,13 @@ const Navbar = () => {
   const { openSidebar } = useSidebarContext();
 
   return (
-    <nav className="navbar bg-gradient flex align-center">
+    <nav className="navbar flex align-center">
       <div className="container w-100">
         <div className="navbar-content flex align-center justify-between">
           <div className="brand-and-toggler">
             <Link
               to="/"
-              className="navbar-brand text-white flex align-center fs-26"
+              className="navbar-brand text-black flex align-center fs-26"
             >
               <span className="navbar-brand-icon">
                 <GiPapers />
@@ -28,17 +28,17 @@ const Navbar = () => {
           <div className="navbar-row flex align-center">
             <ul className="navbar-nav flex align-center font-rubik">
               <li className="nav-item">
-                <Link to="/" className="nav-link text-white fw-4 fs-19">
+                <Link to="/" className="nav-link text-black fw-4 fs-19">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link text-white fw-4 fs-19">
+                <Link to="/" className="nav-link text-black fw-4 fs-19">
                   Blog
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link text-white fw-4 fs-19">
+                <Link to="/" className="nav-link text-black fw-4 fs-19">
                   About
                 </Link>
               </li>
@@ -52,7 +52,7 @@ const Navbar = () => {
               </button>
               <button
                 type="button"
-                className="sidebar-show-btn bg-white flex align-center justify-center"
+                className="sidebar-show-btn bg-light-blue-gradient flex align-center justify-center"
                 onClick={() => openSidebar()}
               >
                 <FaBars size={21} />
