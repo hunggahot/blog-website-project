@@ -32,12 +32,13 @@
             border-radius: 2px;
             margin-left  : 32px;
             padding      : 4px;
-            border       : 1px solid $clr-white;
+            border       : 1px solid $clr-black;
             transition   : $transition;
 
             &:hover {
                 background-color: transparent;
                 color           : $clr-white;
+                border          : 1px solid $clr-white;
             }
         }
     }

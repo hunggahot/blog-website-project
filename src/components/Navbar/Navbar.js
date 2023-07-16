@@ -18,7 +18,7 @@ const Navbar = () => {
               to="/"
               className="navbar-brand text-black flex align-center fs-26"
             >
-              <span className="navbar-brand-icon">
+              <span className="navbar-brand-icon text-mid-blue">
                 <GiPapers />
               </span>
               <span className="navbar-brand-txt font-rubik fw-5">Blog</span>

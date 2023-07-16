@@ -6,7 +6,7 @@ $clr-purple    : #8200DD;
 $clr-white     : #fff;
 $clr-black     : #000;
 $clr-dark-blue : #0D1741;
-$clr-mid-blue  : #49009B;
+$clr-mid-blue  : #2b2ed8;
 $clr-ex-blue   : #3F0085;
 $clr-grey      : #565872;
 $clr-light-blue: #F7FBFF;
@@ -238,6 +238,10 @@ select {
 
     &-light-blue-gradient {
         background-image: $gradient-light-blue;
+    }
+
+    &-dark-blue-gradient {
+        background-image: $gradient-dark-blue;
     }
 }
 

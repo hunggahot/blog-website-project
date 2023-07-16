@@ -17,7 +17,7 @@ const Sidebar = () => {
         <FaTimes size={24} className="text-white" />
       </button>
       <Link className="navbar-brand text-white flex align-center fs-26" to="/">
-        <span className="navbar-brand-icon">
+        <span className="navbar-brand-icon text-mid-blue">
           <GiPapers />
         </span>
         <span className="navbar-brand-txt font-rubik fw-5">Blog</span>
@@ -42,7 +42,9 @@ const Sidebar = () => {
       <div className="sidebar-blocks my-5">
         <div className="sidebar-block">
           <h3 className="font-rubik text-white">Address</h3>
-          <p className="text-white">3538 Cambridge Place Laurel, MD 20707</p>
+          <p className="text-white">
+            Phúc Quý Building, 164 Nguyễn Văn Thương, Bình Thạnh, HCM
+          </p>
         </div>
         <div className="sidebar-block">
           <h3 className="font-rubik text-white">Phone</h3>
@@ -50,7 +52,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-block">
           <h3 className="font-rubik text-white">Email</h3>
-          <p className="text-white">blog@contact.com</p>
+          <p className="text-white">blog@gmail.com</p>
         </div>
       </div>
     </div>
